@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="contenedor">
+    <div *ngIf="!registro">
+        <h2>Ingresar</h2>
+        <form #i="ngForm" (ngSubmit)="i.form.valid && Ingresar(i)">
+            <div class="gridContainer">
+                <p>
+                    <label>Email </label>
+                    <input type="text" name="email" placeholder="user@gmail.com" ngModel required>
+                </p>
+                <p>
+                    <label>Clave </label>
+                    <input type="password" name="password" placeholder="123456" ngModel required>
+                </p>
+            </div>
+            <!--<button (click)="i.form.valid && Ingresar(i)">Ingresar</button>-->
+            <button>Ingresar</button>
+            <button (click)="registro=true">Registrarme</button>
+        </form>
+    </div>
+    <div *ngIf="registro">
+        <h2>Registrarse</h2>
+        <form #f="ngForm" (ngSubmit)="f.form.valid && Registrar(f)">
+            <div class="gridContainer">
+                <p>
+                    <label>Nombre </label>
+                    <input type="text" name="nombre" placeholder="user" ngModel required>
+                </p>
+                <p>
+                    <label>Email </label>
+                    <input type="text" name="email" placeholder="user@gmail.com" ngModel required>
+                </p>
+                <p>
+                    <label>Clave </label>
+                    <input type="password" name="password" placeholder="123456" ngModel required>
+                </p>
+            </div>
+            <button>Aceptar</button>
+            <button (click)="registro=false">Iniciar sesion</button>
+        </form>
+    </div>
+</div>

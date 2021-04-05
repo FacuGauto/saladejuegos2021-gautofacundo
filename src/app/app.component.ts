@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthFirebaseService } from './servicios/auth-firebase.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'salaDeJuegos2021';
+
+  constructor(){}
+
+  
 }

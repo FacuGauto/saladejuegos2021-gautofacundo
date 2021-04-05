@@ -7,10 +7,11 @@ import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
+  {path:'', pathMatch: 'full', redirectTo: '/login'},
+  {path:'home', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'registro', component: RegistroComponent},
-  {path:'quien-soy', component: QuienSoyComponent},
+  {path:'quiensoy', component: QuienSoyComponent},
   {path:'**', component: ErrorComponent}
 ];
 

@@ -1,0 +1,59 @@
+.contenedor {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+form {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 3);
+    background: #222222;
+}
+
+.gridContainer {
+    grid-gap: 1rem;
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    grid-template-columns: 1fr 1fr;
+}
+
+form > * {
+    padding: 1em;
+}
+
+form p {
+    margin: 0;
+    padding: 1em;
+}
+
+form button,
+form input {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+form button {
+    background: #b70e21;
+    color: #000;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+form button:hover,
+form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
