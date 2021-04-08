@@ -38,8 +38,6 @@ export class LoginComponent implements OnInit {
   
 
   Ingresar(form: NgForm) {
-    console.log("sdasdasdsad");
-
     const email = form.value.email;
     const password = form.value.password;
     console.log(email);
@@ -53,7 +51,7 @@ export class LoginComponent implements OnInit {
 
       this.db.collection('pruebas').add({
           email: usuario.email,
-          //fechaacceso: firebase.firestore.Timestamp.fromDate(new Date()),
+          //fechaacceso: firebase.firestore.FieldValue.serverTimestamp(),
           dato: 'dato de prueba'
       })
       .then(docRef => {
