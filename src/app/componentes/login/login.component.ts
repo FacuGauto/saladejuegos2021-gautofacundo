@@ -49,10 +49,10 @@ export class LoginComponent implements OnInit {
       console.log('Login exitoso', res);
       this.authFirebase.isloggedIn = true;
 
-      this.db.collection('pruebas').add({
+      this.db.collection('log').add({
           email: usuario.email,
           //fechaacceso: firebase.firestore.FieldValue.serverTimestamp(),
-          dato: 'dato de prueba'
+          dato: 'login usuarios'
       })
       .then(docRef => {
         localStorage.setItem('usuario', JSON.stringify(usuario));
@@ -91,7 +91,7 @@ export class LoginComponent implements OnInit {
       .then(docRef => {
         localStorage.setItem('usuario', JSON.stringify(usuario));
         //this.miservicio.usuario = this.usuario;
-        this.route.navigate(['home']);
+        this.route.navigate(['login']);
         console.log('Document written with ID: ', docRef.id);
       })
       .catch(error => {

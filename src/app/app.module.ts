@@ -13,6 +13,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {AngularFirestoreModule } from '@angular/fire/firestore'
 import { FormsModule } from '@angular/forms';
+import { TatetiComponent } from './componentes/juegos/tateti/tateti.component';
+import { PptijeraComponent } from './componentes/juegos/pptijera/pptijera.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     QuienSoyComponent,
     RegistroComponent,
-    ErrorComponent
+    ErrorComponent,
+    TatetiComponent,
+    PptijeraComponent
   ],
   imports: [
     BrowserModule,
