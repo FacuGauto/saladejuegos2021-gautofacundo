@@ -1,1 +1,23 @@
-<p>pptijera works!</p>
+<div class="title">
+    <h1>¡¡Piedra, Papel ó Tijera!!</h1>
+</div>
+<div class="score-board">
+    <div id="user-label" class="badge">user</div>
+    <div id="comp-label" class="badge">comp</div>
+    <span id="user-score">{{puntosUsuario}}</span>:<span id="comp-score">{{puntosComputadora}}</span>
+</div>
+<p class="info-game">{{resultado}}</p>
+<div class="container ppt">
+    <div class="choices">
+        <div class="choice" (click)="play('r')">
+          <img src="./../../../../assets/pptijera/rock.png">
+        </div>
+        <div class="choice" (click)="play('p')">
+          <img src="./../../../../assets/pptijera/paper.png">
+        </div>
+        <div class="choice" (click)="play('s')">
+          <img src="./../../../../assets/pptijera/scissors.png">
+        </div>
+    </div>
+</div>
+<p class="info-game">Selecciona tu jugada</p>
